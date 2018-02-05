@@ -4,7 +4,7 @@
 <title>10 Canvas interact - example 3</title>
 <meta charset="utf-8">
 
-<script src="//d3js.org/d3.v4.min.js"></script>
+<script src="//d3js.org/d3.v5.min.js"></script>
 <script src="//d3js.org/topojson.v1.min.js"></script>
 
 <style type="text/css">
@@ -374,12 +374,7 @@ function ready(world) {
 /* Data load and init */
 /* ================== */
 
-d3.json('data/world-110.json', function(error, data) {
-  if (error) throw error;
-
-  ready(data);
-
-});
+d3.json('data/world-110.json').then(ready);
 
 
 </script>
